@@ -68,17 +68,20 @@ for ( let k = 1; k <= starsMax; k++ ){
 
 /* PRIME NUMBER */
 
-let primeNumber = 1;
-var primeKey=2;
-var b;
-var isPrime = "true";
-while(primeKey<primeNumber){
-    if(primeNumber % primeKey === 0){
-        isPrime = "false";
+let numsArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+var primeKey = 0;
+while ( primeKey < numsArray.length){
+    if ( isPrime(numsArray[primeKey]) ) {
+        console.log ( `${numsArray[primeKey]} is a prime number.` );
     }
     primeKey++;
 }
-console.log ( isPrime );
+
+function isPrime(num) {
+    for(var i = 2; i < num; i++)
+      if(num % i === 0) return false;
+    return num > 1;
+  }
 
 /* Get array of objects with just name and height properties */
 let namesAndHeightsArray = characters.map((character) => {
