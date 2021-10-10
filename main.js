@@ -59,7 +59,11 @@ console.log ( reverseNumbersArray.reverse() );
 let starsMax = 5;
 
 for ( let k = 1; k <= starsMax; k++ ){
-    console.log ( '*'.repeat(k));
+    stars = "";
+    for ( let _k = 1; _k <= k; _k++ ){
+        stars += "*";
+    }
+    console.log ( stars );
 }
 
 /* PRIME NUMBER */
