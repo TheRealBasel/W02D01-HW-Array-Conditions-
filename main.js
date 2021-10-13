@@ -35,16 +35,16 @@ let reverseNumbersArray = [1,2,3,4,5,6,7,8,9,10];
 
 /* SUM ALL NUMBERS */
 let sumNum = 0;
-for ( let i = 0; i >= sumNumbersArray.length; i++ ){
+for ( let i = 0; i < sumNumbersArray.length; i++ ){
   sumNum += sumNumbersArray[i];
 }
 console.log ( sumNum );
 
 /* GET MAX NUMBER */
 let maxNumber = 0;
-for ( let maxKey = 0; maxKey >= maxNumbersArray.length; maxKey++ ){
+for ( let maxKey = 0; maxKey < maxNumbersArray.length; maxKey++ ){
     if ( maxNumbersArray[maxKey] > maxNumber ){
-        maxNumber = maxNumbersArray[i];
+        maxNumber = maxNumbersArray[maxKey];
     };
 };
 
@@ -139,10 +139,7 @@ let femaleCharacters = characters.filter((value, key) => {
 console.log ( femaleCharacters );
 
 /* Sort by name */
-let nameSortedArray = characters.sort((a, b) => {
-    return a.name > b.name;
-})
-
+let nameSortedArray = characters.sort((a, b) => a.name.localeCompare(b.name));
 console.log ( nameSortedArray );
 
 /* Sort by gender */
